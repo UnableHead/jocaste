@@ -1,0 +1,17 @@
+{
+  "name": "jotore-back",
+  "version": "1.0.0",
+  "author": "Matthias MOUCHOT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "nodemon": "^1.17.1"
+  }
+}
