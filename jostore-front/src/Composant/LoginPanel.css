@@ -1,9 +1,63 @@
-.Stand {
-    flex: 1;
-    background-color: #ddd;
-    padding: 20px;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.LoginPanel{
+  font-family: Verdana, Geneva, sans-serif;
+  min-width: 410px;
+  min-height: 410px;
+  width: 60vmin;
+  height: 60vmin;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(#579baa , #579baa, #6fb3c2);
+  border: 3px solid #00478d;
+  position: absolute;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+}
+
+.LoginPanel > *{
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.LoginPanel-content{
+  border-top: 3px solid #00478d;
+  border-left: 3px solid #00478d;
+  min-width: 260px;
+  min-height: 260px;
+  width: 40vmin;
+  height: 40vmin;
+  max-width: 402px;
+  max-height: 400px;
+  padding: 10px;
+}
+
+.LoginForm{
+  min-width: 140px;
+  width: 22vmin;
+  display: flex;
+  flex-direction: column;
+}
+
+.LoginForm *{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.LoginForm *:nth-child(even){
+  max-width: 100%;
+  align-self: flex-end;
+}
+
+.LoginForm label{
+  color: black;
+  font-weight: bold;
+  border-bottom: 1px solid #9c0000;
+}
+
+.LoginFormSubmit{
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 55%;
 }

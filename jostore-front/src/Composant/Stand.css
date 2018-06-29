@@ -1,9 +1,26 @@
 .Stand {
-    flex: 1;
-    background-color: #ddd;
-    padding: 20px;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  font-size: 1.5em;
+  overflow-x: auto;
+}
+
+.Stand-background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../Asset/img/background.png) center no-repeat;
+  background-size: cover;
+  filter: grayscale(100%) brightness(300%) contrast(50%);
+  z-index: -1;
+}
+
+.Stand-content{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Stand-content > *:first-child{
+  transform-origin: center center;
+  transform: perspective(1000px) rotateY(70deg);
 }

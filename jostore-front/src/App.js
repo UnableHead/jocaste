@@ -7,10 +7,10 @@ import Foot from "./Composant/Foot";
 import "./App.css";
 
 class App extends Component{
-  // <LoginPanel/>
   render(){
     return (
       <div className="App">
+        <LoginPanel/>
         <div className="App-content">
           <Header/>
           <Stand/>

@@ -32,7 +32,6 @@ app.get("/download/*", (req, res) => {
   res.sendFile(filePath);
 });
 app.post("/query/:queryKeyword", (req, res) => {
-  console.log("Matthias", req.body);
   dataBaseAccess.dbRequest({keyword: req.params.queryKeyword}, (a) => {
     res.send(a);
   });
