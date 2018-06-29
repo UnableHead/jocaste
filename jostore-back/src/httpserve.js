@@ -31,6 +31,10 @@ app.get("/download/*", (req, res) => {
   const filePath = path.resolve(_.serverFolder + "/files/" + req.params[0]);
   res.sendFile(filePath);
 });
+app.post("/download/", (req, res) => {
+  const filePath = path.resolve(_.serverFolder + "/files/" + req.body.targetFileName);
+  res.sendFile(filePath);
+});
 app.post("/query/:queryKeyword", (req, res) => {
   dataBaseAccess.dbRequest({keyword: req.params.queryKeyword}, (a) => {
     res.send(a);

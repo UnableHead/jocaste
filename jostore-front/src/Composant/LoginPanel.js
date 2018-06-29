@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./LoginPanel.css";
 
+// TODO Check user and password
 class LoginPanel extends Component{
 
   constructor(props){

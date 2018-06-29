@@ -1,7 +1,6 @@
 .Stand {
   flex: 1;
   font-size: 1.5em;
-  overflow-x: auto;
 }
 
 .Stand-background{
@@ -18,6 +17,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  overflow-x: auto;
 }
 
 .Stand-content > *:first-child{

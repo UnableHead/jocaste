@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ReactTooltip from "react-tooltip";
 import Header from "./Composant/Header";
 import LoginPanel from "./Composant/LoginPanel";
 import Stand from "./Composant/Stand";
@@ -10,6 +11,7 @@ class App extends Component{
   render(){
     return (
       <div className="App">
+        <ReactTooltip place="top" type="info" effect="float"/>
         <LoginPanel/>
         <div className="App-content">
           <Header/>
