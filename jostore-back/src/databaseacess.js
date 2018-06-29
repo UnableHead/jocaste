@@ -4,8 +4,8 @@ const cfgData = require("./configLoader");
 
 const _ = {
     requestList: {
-        listSi:
-            "SELECT * FROM `mfm`.`si`;",
+        listItemModule:
+            "SELECT * FROM jostore.item_module;",
         infoSI:
             "SELECT si.name AS name, "
                 + "(SELECT COUNT(*) FROM `mfm`.`domain` d WHERE d.`id_si` = si.`id`) AS nbDomain "
@@ -59,7 +59,7 @@ class DataBaseAccess{
         const typeofRequest = typeof request;
         if(typeofRequest === "undefined"){
             const error = "[DataBaseAccess] '" + keyword
-                + "' not exist. Available list is : " + Object.keys(_.requestList) + Object.keys(_.requestSecureList);
+                + "' not exist. Available list is : " + Object.keys(_.requestList);
             console.error(error);
         }else{
             const requestParam = dataRequest.requestParam;
