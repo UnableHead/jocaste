@@ -4,4 +4,101 @@
   border: 3px solid #4a8caa;
   margin: 10px;
   background-color: #8c8caabb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Item-description{
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+.Item-but-slider{
+  display: flex;
+  width: 90%;
+  padding-bottom: 10px;
+  transition: top 2s ease;
+}
+
+.Item-but-slider > img{
+  transition: background-color 1s ease-out;
+}
+
+.Item-but-slider:hover{
+  cursor: pointer;
+}
+
+.Item-but-slider:hover > img{
+  cursor: pointer;
+  background: #1a41a7aa;
+}
+
+
+.Item-but-slider > img{
+  width: 40px;
+  height: 40px;
+  background: #aaaaaaaa;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #000000aa;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Item-but-slider > div{
+  width: 40%;
+  height: 0px;
+  border-radius: 3px;
+  border: 2px solid #000000bb;
+  transform: translateY(22px);
+}
+
+.Item-action{
+  width: 90%;
+  height: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Item-action div{
+  background: blue;
+  transition: background-color 1s ease-out;
+  padding: 5px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.Item-action div:hover{
+  cursor: pointer;
+  background: #1a41a7aa;
+}
+
+.fadeOut {
+  animation: fadeout 1s forwards;
+}
+@keyframes fadeout {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    height : 0;
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadein 1s forwards;
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    height : 152px;
+    opacity: 1;
+  }
 }

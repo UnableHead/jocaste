@@ -17,17 +17,15 @@ class LoginPanel extends Component{
   render(){
     return (
       <div className={"LoginPanel" + (this.state.hidden ? " hidden" : "")}>
-        <div>
-          <div className="LoginPanel-content">
-            <form className="LoginForm" onSubmit={this.handleSubmit}>
-              <label htmlFor="name">Nom :</label>
-              <input type="text" id="name" name="user_name"/>
-              <label>Mot de passe :</label>
-              <input type="text" id="name" name="user_name"/>
-              <button className="LoginFormSubmit" type="submit">Connexion</button>
-            </form>
-          </div>
-          <div className="deco1"/>
+        <div className="LoginPanel-background"/>
+        <div className="LoginPanel-content">
+          <form className="LoginForm" onSubmit={this.handleSubmit}>
+            <label htmlFor="name">Nom :</label>
+            <input type="text" id="name" name="user_name"/>
+            <label>Mot de passe :</label>
+            <input type="text" id="name" name="user_name"/>
+            <button className="LoginFormSubmit" type="submit">Connexion</button>
+          </form>
         </div>
       </div>
     );

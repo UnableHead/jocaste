@@ -22,7 +22,6 @@ const query = {
       {url: config.backHost + "download/", form: postData},
       (err, httpResponse, body) => {
         if(!err && httpResponse.statusCode === 200){
-          //const info = JSON.parse(body);
           return callback(body);
         }
       }

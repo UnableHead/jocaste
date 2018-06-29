@@ -10,7 +10,7 @@
   height: 100%;
   background: url(../Asset/img/background.png) center no-repeat;
   background-size: cover;
-  filter: grayscale(100%) brightness(300%) contrast(50%);
+  filter: contrast(25%) brightness(150%) contrast(25%) brightness(120%) grayscale(100%);
   z-index: -1;
 }
 
@@ -22,5 +22,10 @@
 
 .Stand-content > *:first-child{
   transform-origin: center center;
-  transform: perspective(1000px) rotateY(70deg);
+  animation: Stand-content-spin 1s ease forwards;
+}
+
+@keyframes Stand-content-spin {
+  from { transform: perspective(1000px) rotateY(0deg); }
+  to { transform: perspective(1000px) rotateY(75deg); }
 }
