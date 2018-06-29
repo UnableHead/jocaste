@@ -1,0 +1,9 @@
+.Stand {
+    flex: 1;
+    background-color: #ddd;
+    padding: 20px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

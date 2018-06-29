@@ -8,6 +8,7 @@
   // Définition de l'environement applicatif
   "env": {
     "es6": true,
+    "browser": true,
     "node": true,
     "commonjs": true
   },
@@ -17,18 +18,30 @@
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
+      "jsx": true,
       "experimentalObjectRestSpread": true
     }
   },
 
+  // Importation des plugins
+  "plugins": [
+    "react"
+  ],
+
+
   // Ajout de lot de règle
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
 
   // Ajout de règle spécifiques
   "rules": {
-    "no-console": "off",
+    // Désactivation des règles importés dans les lots. La désactivation est temporaire
+    "no-console": ["off"],
+    "no-unused-vars": ["off"],
+    "react/prop-types": ["off"],
+    "react/no-string-refs": ["off"],
 
     // Règles suplémentaires trié par catégories :
 
@@ -53,7 +66,7 @@
     "no-floating-decimal": "error",
     "no-invalid-this": "error",
     "no-loop-func": "error",
-    "no-magic-numbers": ["error", {"ignore": [0, 1]}],
+    // "no-magic-numbers": ["error", {"ignore": [0, 1]}], // ToDo: Règle à ajouter 193 erreur
     "no-multi-spaces": ["error", {"ignoreEOLComments": true}],
     "no-self-compare": "error",
     "no-sequences": "error",
@@ -78,7 +91,7 @@
     "func-call-spacing": "error",
     "func-name-matching": "error",
     "function-paren-newline": "error",
-    "implicit-arrow-linebreak": "error",
+    // "implicit-arrow-linebreak": "error",
     "indent": [
       "error", 2, {
         "SwitchCase": 1,
@@ -93,7 +106,7 @@
     "jsx-quotes": "error",
     "key-spacing": "error",
     "lines-between-class-members": ["error", "always"],
-    "max-len": ["error", {"code": 120 }],
+    "max-len": ["error", {"code": 200, "ignoreComments": true}],
     "new-cap": ["error", {"capIsNew": false}],
     "new-parens": "error",
     "newline-per-chained-call": ["error", {"ignoreChainWithDepth": 3}],
@@ -135,9 +148,12 @@
     "arrow-spacing": "error",
     "no-confusing-arrow": "error",
     "no-duplicate-imports": "error",
-    "no-var": "error",
+    // "no-var": "error", // ToDo: Règle à ajouter
     "prefer-arrow-callback": "error",
-    "prefer-const": "error"
+    "prefer-const": "error",
+
+    // Plugins rules
+    "react/jsx-uses-vars": "error"
 
   }
 }
